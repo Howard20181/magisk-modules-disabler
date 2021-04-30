@@ -8,6 +8,8 @@ This module allows you to disable the Magisk module if the data partition cannot
 
 Create a file named `disable_all_modules` in `/data/unencrypted` or `/cache` to disable all modules.
 
+_If the system is successfully booted and the screen is unlocked properly these two files are automatically deleted to prevent all modules from being disabled each time the system is booted._
+
 Create a file named `disable.list` in `/data/unencrypted` or `/cache` and write module ids (one module per line) in it to disable specific modules.
 
 Tips: The module id is the name of the module's directory
