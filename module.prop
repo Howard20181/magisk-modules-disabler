@@ -1,0 +1,7 @@
+id=hwr_magisk_modules_disabler
+name=Magisk Modules Disabler
+version=v1
+versionCode=1
+author=Howard
+description=Disable Modules without decrypt the data partition.
+support=https://t.me/hzrtools
