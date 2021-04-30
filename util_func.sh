@@ -3,7 +3,7 @@ MODDIR=${0%/*}
 MODS=$(ls "$(magisk --path)/.magisk/modules")
 MODSPATH="$(magisk --path)/.magisk/modules"
 disable_all_modules() {
-    if [ -f /data/unencrypted/disable_all_modules ] || [ -f /cache/disable_all_modules ]; then
+    if [ -f /data/unencrypted/disable_all_modules ] || [ -f /cache/disable_all_modules ] || [ "$(getprop persist.sys.safemode)" == "1" ]; then
         for dir in $MODS; do
             if [ -d "${MODSPATH}"/"${dir}" ] && [ "${dir}" != "hwr_magisk_modules_disabler" ]; then
                 touch "${MODSPATH}"/"${dir}"/disable
